@@ -8,11 +8,14 @@ public class SearchInArray {
         int[] arr = {44,34,73,83,84,26,84,997};
         System.out.print("Enter the element to search in array :");
         int target = sc.nextInt();
-        boolean found = false;
+        int found = -1;
         for(int i = 0 ; i < arr.length ; i++){
-            if(arr[i] == target) found = true;
+            if(arr[i] == target){
+                found = i;
+                break;
+            }
         }
-        if(found) System.out.println("Element found in the array");
+        if(found != -1) System.out.println("Element found in the array at index :" + found);
         else System.out.println("Element not found in the array");
 
     }
