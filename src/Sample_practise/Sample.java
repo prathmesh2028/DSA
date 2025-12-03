@@ -4,14 +4,10 @@ import java.util.Scanner;
 
 public class Sample {
     public static void main(String[] args) {
-        // BRIDGE PATTERN
-        int a = 4;
-        int b = 2;
-        int ans = 1;
-        for(int i = 1 ; i <= b ; i++){
-            ans *= a;
+        int n = 5;
+        for(int i = 2 ; i <= n ; i*=i){
+            System.out.println("GFG");
         }
-        System.out.println(ans);
 
 
     }
