@@ -1,0 +1,31 @@
+package OOPs;
+class Pokemon{
+    int power;
+    String type;
+    String name;
+    Pokemon(String type , int power){ // setter
+        this.power = power;
+        this.type = type;
+    }
+    Pokemon(){
+
+    }
+}
+class StrongPokemon extends Pokemon{
+    int speed;
+}
+class LegendaryPokemon extends Pokemon{
+    String ability;
+}
+class GodPokemon extends LegendaryPokemon{
+    char tag;
+}
+public class Inheritance {
+    public static void main(String[] args) {
+        LegendaryPokemon mewtwo = new LegendaryPokemon();
+        mewtwo.ability = "Pressure";
+        Pokemon pikachu = new Pokemon();
+        GodPokemon dialga = new GodPokemon();
+//        dialga.
+    }
+}

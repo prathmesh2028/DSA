@@ -1,7 +1,7 @@
 package OOPs;
 class Cricketer{
 
-    final String country = "INDIA";
+    static String country = "INDIA";
 
     int runs;
     String name;
@@ -12,5 +12,8 @@ public class FinalAndStatic {
         Cricketer c1 = new Cricketer();
 //        c1.country = "England"; cannot assign value to final variable
         System.out.println(c1.country);
+        Cricketer c2 = new Cricketer();
+//        c1.country = "NZ";
+        System.out.println(c2.country);
     }
 }
