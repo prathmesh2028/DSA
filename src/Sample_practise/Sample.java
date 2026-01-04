@@ -1,20 +1,18 @@
 package Sample_practise;
 
-import java.util.Scanner;
-
-public class Sample {
+import java.util.*;
+class Sample{
     public static void main(String[] args) {
-        int [][]arr = {{1,2,3,4},{5,6,7,8},{9,1,2,0},{3,1,5,6}};
-        int minElement = Integer.MAX_VALUE;
-        for(int i = 0 ; i < arr.length ; i++){
-            int maxElem = 0;
-            for(int j = 0 ; j < arr[0].length ; j++){
-                if(maxElem < arr[i][j]){
-                    maxElem = arr[i][j];
-                }
-            }
-            minElement = Math.min(minElement , maxElem);
+        // wave array problem
+        int[] arr = {1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 };
+        int d = 2;
+
+    }
+    public static void revArr(int[] arr , int a , int b){
+        int i = a;
+        int j = b;
+        while(i < j){
+//            int temp =
         }
-        System.out.println(minElement);
     }
 }
