@@ -3,17 +3,27 @@ package Sample_practise;
 import java.util.*;
 class Sample{
     public static void main(String[] args) {
-        int [][] arr = {{1,2,3} , {4,5,6}};
-        int a = arr.length;
-        int b = arr[0].length;
-        printArr(arr);
-        int[][] newArr = new int[b][a];
-        for(int i = 0 ; i < newArr.length ; i++){
-            for(int j = 0 ; j < newArr[0].length ; j++){
-                newArr[i][j] = arr[j][i];
+        int[][] matrix = {{1,1}};
+        int target = 2;
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int i = 0;
+        int j = n-1;
+        while(j >= 0 && i < m){
+            if(matrix[i][j] == target){
+                System.out.print("true");
+                break;
+            }
+            else if(matrix[i][j] > target){
+                j--;
+            }
+            else if(matrix[i][j] < target){
+                i++;
             }
         }
-        printArr(newArr);
+
+        printArr(matrix);
+
     }
     public static void printArr(int[][] arr){
         for(int i = 0 ; i < arr.length ; i++){
