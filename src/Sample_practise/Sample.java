@@ -3,34 +3,36 @@ package Sample_practise;
 import java.util.*;
 class Sample{
     public static void main(String[] args) {
-        int[][] matrix = {{1,1}};
-        int target = 2;
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int i = 0;
-        int j = n-1;
-        while(j >= 0 && i < m){
-            if(matrix[i][j] == target){
-                System.out.print("true");
-                break;
-            }
-            else if(matrix[i][j] > target){
-                j--;
-            }
-            else if(matrix[i][j] < target){
-                i++;
-            }
-        }
+        int[][] arr ={{1,2,3},
+        {4,5,6},
+        {7,8,9}};
+        int sum = 0;
 
-        printArr(matrix);
-
-    }
-    public static void printArr(int[][] arr){
+        int m = arr.length;
+        int n = arr[0].length;
         for(int i = 0 ; i < arr.length ; i++){
-            for(int j = 0 ; j < arr[0].length ; j++){
-                System.out.print(arr[i][j] + " ");
+            for(int j = 0 ; j < arr.length ; j++){
+                if(i == j){
+                    sum += arr[i][j];
+                }
             }
-            System.out.println();
         }
+        for(int i = arr.length - 1 ; i >= 0 ; i--){
+            for(int j = arr.length - 1 ; j >= 0 ; j--){
+                if(i == j){
+                    sum += arr[i][j];
+                }
+            }
+        }
+        if(arr.length % 2 != 0){
+            sum = sum - (arr[m/2][n/2]);
+        }
+        System.out.println(sum);
     }
+
+
+
+
+
+
 }
