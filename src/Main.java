@@ -1,21 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main{
     public static void main(String[] args) {
-        int[] nums = {437,315,322,431,686,264,442};
-        int n = nums.length;
-        int count = 0;
-        int rc = 0;
-        for(int i= 0 ; i < n ; i++){
-            count = 0;
-            int temp = nums[i];
-            while(temp > 0){
-                int digit = temp % 10;
-                temp /= 10;
-                count++;
+        int[][] matrix = {{1,10,4,2},
+                         {9,3,8,7},
+                          {15,16,17,12}};
+        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> lowestinrow = new ArrayList<>();
+        ArrayList<Integer> maxincolumn = new ArrayList<>();
+        for(int i = 0 ; i < matrix.length ; i++){
+            int num = Integer.MAX_VALUE;
+            for(int j = 0; j < matrix[0].length ; j++){
+                if(num > matrix[i][j]) num = matrix[i][j];
             }
-            if(count % 2 == 0){
-                rc++;
-            }
+            lowestinrow.add(num);
         }
-        System.out.println(rc);
+        for(int i = 0 ; i < matrix[0].length ; i++){
+            int num = Integer.MIN_VALUE;
+            for(int j = 0; j < matrix.length ; j++){
+                if(num < matrix[j][i]) num = matrix[j][i];
+            }
+            maxincolumn.add(num);
+        }
+        int minA = Collections.min(maxincolumn);
+        int maxB = Collections.max(lowestinrow);
+
+        if(minA == maxB){
+            System.out.println("Number satisfies condition: " + minA);
+        } else {
+            System.out.println("No common number fits the rule.");
+        }
+
     }
 }
