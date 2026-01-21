@@ -16,8 +16,7 @@ public class Square_Root {
         while(low <= high){
             int mid = low + (high - low)/2;
             if(mid == n/mid){
-                ans = mid;
-                return ans;
+                return mid;
 //                low = mid + 1;/
             }
             else if(mid> n/mid) high = mid -1;

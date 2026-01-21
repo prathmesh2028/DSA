@@ -24,7 +24,7 @@ public class Segregate0sAnd1s {
         while(i < j){
             if(arr[i] == 0) i++;
             else if(arr[j] == 1) j--;
-            else if(i > j) break;
+            else if(i > j) break; //  still this is an redundant statement
             else if(arr[i] == 1 && arr[j] == 0){
                 arr[i] = 0;
                 arr[j] = 1;
