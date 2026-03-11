@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+package StringInJava.Questions;
 
-public class Main{
+public class ComplementOfBase10 {
     public static void main(String[] args) {
-        System.out.println(bitwiseComplement(5));
+        decitobi(5);
     }
-    public static int bitwiseComplement(int n) {
+    public static void decitobi(int n){
         StringBuilder ans = new StringBuilder();
         while(n > 0){
             int digit = n % 2;
@@ -14,6 +12,7 @@ public class Main{
             n /= 2;
         }
         ans.reverse();
+        System.out.println(ans);
         for(int i = 0 ; i < ans.length() ; i++){
             if(ans.charAt(i) == '1'){
                 ans.setCharAt(i , '0');
@@ -22,16 +21,20 @@ public class Main{
                 ans.setCharAt(i , '1');
             }
         }
+        System.out.println(ans);
 
-        int finalans = Integer.parseInt(ans.toString());
-        int answer = 0;
+        int binary = Integer.parseInt(ans.toString());
+        System.out.println(binary);
+
+        int finalans = 0;
         int pow = 1;
-        while(finalans > 0){
-            int digit = finalans % 10;
-            answer += digit * pow;
+        while(binary > 0){
+            int digit = binary % 10;
+            finalans += digit * pow;
             pow *= 2;
-            finalans /= 10;
+            binary /= 10;
         }
-        return finalans;
+        System.out.println(finalans);
+
     }
 }
