@@ -25,6 +25,6 @@ public class FunctionCallingItself {
     public static void oneton(int x , int n){
         if(x > n) return;
         System.out.println(x);
-        oneton(x+1 , n);
+        oneton(x+1,n);
     }
 }
