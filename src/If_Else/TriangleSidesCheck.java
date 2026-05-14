@@ -12,6 +12,11 @@ public class TriangleSidesCheck {
         System.out.print("Enter side 3 :");
         c = sc.nextDouble();
 
+        if(((a+b) > c) && ((b+c) > a) && ((a+c) > b))
+        {
+            System.out.println("it is an valid triange");
+        }
+        else System.out.println("not a valid triange");
 
     }
 }
