@@ -1,21 +1,22 @@
-package loops;
+package loops.Questions;
 
 import java.util.Scanner;
 
 public class ReverseANumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n ;
         System.out.print("Enter the number :");
-        n = sc.nextInt();
-        int reverseNum = 0;
-        while(n > 0){
+        int n = sc.nextInt();
+
+        int revNum = 0;
+        while( n != 0)
+        {
             int digit = n % 10;
-            reverseNum *= 10;
-            reverseNum += digit;
+            revNum *= 10;
+            revNum += digit;
             n /= 10;
         }
-        System.out.println(reverseNum);
+        System.out.println(revNum);
     }
 
 }

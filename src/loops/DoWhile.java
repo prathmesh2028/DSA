@@ -8,6 +8,8 @@ public class DoWhile {
             i++;
         } while (i <= 10) ;
 
+        // infinite loop here warning
+//        for(;;) System.out.println("Prathmesh");
 
     }
 }
