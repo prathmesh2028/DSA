@@ -11,7 +11,7 @@ public class GP {
         int r = 2;
 
         // printing all terms till 100
-        for(int i = 1 ; i <= 100 ; i *= 2)
+        for(int i = 1 ; i <= n ; i *= 2)
         {
             System.out.print(i + " ");
         }
