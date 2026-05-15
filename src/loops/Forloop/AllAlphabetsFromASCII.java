@@ -1,4 +1,4 @@
-package loops;
+package loops.Forloop;
 
 public class AllAlphabetsFromASCII {
     public static void main(String[] args) {
