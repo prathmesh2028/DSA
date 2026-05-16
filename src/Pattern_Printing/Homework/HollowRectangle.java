@@ -1,13 +1,14 @@
 package Pattern_Printing.Homework;
 
-public class StarRectangle {
+public class HollowRectangle {
     public static void main(String[] args) {
         int n = 5;
+        int m = 7;
         for(int i = 1 ; i <= n ; i++)
         {
-            for(int j = 1 ; j <= n ; j++)
+            for(int j = 1 ; j <= m ; j++)
             {
-                if((i == 1) || (i == n) || (j == 1) || (j == n))
+                if((i == 1) || (i == n) || (j == 1) || (j == m))
                 {
                     System.out.print("* ");
                 }
