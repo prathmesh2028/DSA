@@ -3,18 +3,30 @@ package Sample_practise;
 import java.util.*;
 class Sample{
     public static void main(String[] args) {
-        int[] nums = {};
-        int n = nums.length;
-        int[] arr = {-1,-1};
-        int k = 0;
-        for(int i = 0 ; i < n ; i++){
-            for(int j = 0 ; j < n ; j++){
-                if(nums[i] == nums[j] && i != j){
-                    arr[k] = j;
-                    k++;
-                }
-
+       // bridge pattern here :)
+        int n = 5;
+        int a = 1;
+        for(int i = 1 ; i <= (2*n-1) ; i++)
+        {
+            System.out.print("* ");
+        }
+        System.out.println();
+        for(int i = 1 ; i <= (n-1) ; i++)
+        {
+            for(int j = 1 ; j <= (n-i) ; j++)
+            {
+                System.out.print("* ");
             }
+            for(int j = 1 ; j <= a ; j++)
+            {
+                System.out.print("  ");
+            }
+            for(int j = 1 ; j <= (n-i) ; j++)
+            {
+                System.out.print("* ");
+            }
+            a += 2;
+            System.out.println();
         }
     }
 

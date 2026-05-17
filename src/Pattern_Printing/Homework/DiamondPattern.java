@@ -2,33 +2,39 @@ package Pattern_Printing.Homework;
 
 public class DiamondPattern {
     public static void main(String[] args) {
-        int n = 10;
-        int nsp = n - 1 , nst = 1;
-        for(int i = 1 ; i <=  n ; i++){
-            for(int j = 1 ; j <= nsp ; j++){
+        // diamond pattern here
+        int n = 4;
+
+        int nsp = (n-1) , nst = 1;
+        for(int i = 1 ; i <= n ; i++)
+        {
+            for(int j = 1 ; j <= nsp ; j++)
+            {
                 System.out.print("  ");
             }
-            for(int k = 1 ; k <= nst ; k++){
+            for(int j = 1 ; j <= nst ; j++)
+            {
                 System.out.print("* ");
             }
-            nsp --;
+            System.out.println();
+            nsp--;
             nst += 2;
-            System.out.println();
         }
-
-
         nsp = 1;
-        nst = 2*n - 3;
-        for(int i = 1 ; i <  n ; i++){
-            for(int j = 1 ; j <= nsp ; j++){
+        nst = n+1;
+        for(int i = 2 ; i <= n ; i++)
+        {
+            for(int j = 1 ; j <= nsp ; j++)
+            {
                 System.out.print("  ");
             }
-            for(int k = 1 ; k <= nst ; k++){
+            for(int j = 1 ; j <= nst ; j++)
+            {
                 System.out.print("* ");
             }
-            nsp ++;
-            nst -= 2;
             System.out.println();
+            nsp++;
+            nst -= 2;
         }
     }
 }
