@@ -1,37 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main{
-    public static void main(String[] args) {
-        System.out.println(bitwiseComplement(5));
-    }
-    public static int bitwiseComplement(int n) {
-        StringBuilder ans = new StringBuilder();
-        while(n > 0){
-            int digit = n % 2;
-            ans.append(digit);
-            n /= 2;
-        }
-        ans.reverse();
-        for(int i = 0 ; i < ans.length() ; i++){
-            if(ans.charAt(i) == '1'){
-                ans.setCharAt(i , '0');
-            }
-            else{
-                ans.setCharAt(i , '1');
-            }
-        }
-
-        int finalans = Integer.parseInt(ans.toString());
-        int answer = 0;
-        int pow = 1;
-        while(finalans > 0){
-            int digit = finalans % 10;
-            answer += digit * pow;
-            pow *= 2;
-            finalans /= 10;
-        }
-        return finalans;
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        int[] x = {6,19,7,69,7,171,8};
+        // indexing
     }
 }
