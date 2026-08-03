@@ -1,4 +1,4 @@
-package Arrayss.Array_Revised;
+package Arrayss.Array_Revised.Questions;
 
 import java.util.Arrays;
 
