@@ -39,6 +39,7 @@ public class MergeTwoSortedArrays {
                 j++;
                 c[k] = arr1[i];
                 i++;
+                k++;
             }
 
         }
