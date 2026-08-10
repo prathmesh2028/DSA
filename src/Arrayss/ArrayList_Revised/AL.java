@@ -1,4 +1,4 @@
-package Arrayss.ArrayList;
+package Arrayss.ArrayList_Revised;
 
 import java.util.ArrayList;
 import java.util.Collections;
