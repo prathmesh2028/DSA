@@ -5,16 +5,18 @@ import java.util.Vector;
 
 public class AddOne {
     public static void main(String[] args) {
-
+        int[] arr = {1,2,3,4,9};
+        Vector<Integer> v = addOne(arr);
+        System.out.println(v);
     }
-    Vector<Integer> addOne(int[] arr) {
+    public static Vector<Integer> addOne(int[] arr) {
         // code here
         Vector<Integer> ans = new Vector<>();
         int n = arr.length;
         int carry = 1;
         for(int i = n-1 ; i >= 0 ; i--)
         {
-            if(arr[i] + carry <= 9)
+            if(arr[i] + carry < 9)
             {
                 ans.add(arr[i] + carry);
                 carry = 0;
